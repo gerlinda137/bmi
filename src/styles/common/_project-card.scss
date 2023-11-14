@@ -1,0 +1,119 @@
+.project-card {
+  background-color: var(--cards-bg-color);
+  padding: 2em 2.375em;
+  border-radius: 1.25em;
+  // display: grid;
+  // grid-template-rows: 1fr -webkit-max-content;
+  // grid-template-rows: 1fr max-content;
+  display: flex;
+  flex-direction: column;
+
+  img {
+    border-radius: 20px;
+    margin-bottom: 2em;
+  }
+
+  &__txt {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    color: var(--contrast-txt);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1.0625em;
+  }
+
+  &__description {
+    color: var(--contrast-txt);
+    font-weight: 300;
+    font-size: 1rem;
+    margin-bottom: 2.25em;
+  }
+
+  &__buttons {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+
+    .button {
+      background-color: var(--card-btn-bg);
+      max-width: 12.5em;
+      width: 100%;
+      font-weight: 500;
+      color: var(--txt);
+      font-size: 1rem;
+      text-align: center;
+      border-radius: 1.5em;
+      transition: 0.3s;
+      padding: 1em 0;
+    }
+
+    .button:not(:last-of-type) {
+      margin-right: 1.4375em;
+    }
+
+    .button:hover {
+      background-color: var(--card-btn-bg-hover);
+      color: var(--contrast-txt);
+      transition: 0.3s;
+    }
+  }
+}
+
+.project-card.hidden {
+  display: none;
+}
+
+@include media-tablet {
+  .project-card {
+    max-width: 580px;
+    min-width: 317px;
+    width: 100%;
+    flex-shrink: 0;
+
+    &__buttons {
+      .button {
+        padding: 0.75em 0;
+      }
+    }
+  }
+}
+
+@include media-mobile {
+  .project-card {
+    max-width: 317px;
+    padding-top: 1.0625em;
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+    padding-bottom: 1.8125em;
+
+    img {
+      margin-bottom: 1em;
+    }
+
+    &__title {
+      font-size: 0.75rem;
+      margin-bottom: 0.84em;
+    }
+
+    &__description {
+      font-size: 0.8125rem;
+      margin-bottom: 1.8125em;
+    }
+
+    &__buttons {
+      .button {
+        max-width: 10.5em;
+        font-size: 0.75rem;
+        padding: 1em 0;
+      }
+
+      .button:not(:last-of-type) {
+        margin-right: 0.75em;
+      }
+    }
+  }
+}

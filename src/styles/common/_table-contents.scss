@@ -1,0 +1,111 @@
+.table-contents {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  grid-auto-rows: minmax(14.5em, 0.5fr);
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5625em;
+    border: 0.5px solid var(--table-border-color);
+
+    span {
+      text-align: center;
+      font-size: 1.125rem;
+      white-space: break-spaces;
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+      hyphens: auto;
+      font-weight: 400;
+    }
+
+    &:hover {
+      background-color: var(--table-el-hover-bg);
+      transition: 0.3s;
+    }
+
+    &:hover .table-contents__img-wrapper svg path:not(.svg-stroke) {
+      fill: var(--contrast-txt);
+      transition: 0.3s;
+    }
+
+    &:hover .table-contents__img-wrapper svg .svg-stroke {
+      stroke: var(--contrast-txt);
+      transition: 0.3s;
+    }
+
+    &:hover span {
+      color: var(--contrast-txt);
+      transition: 0.3s;
+    }
+  }
+
+  &__img-wrapper {
+    max-width: 112px;
+    min-height: 112px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.375em;
+
+    svg .svg-stroke {
+      stroke: var(--table-svg-color);
+    }
+
+    svg path:not(.svg-stroke) {
+      fill: var(--table-svg-color);
+    }
+  }
+}
+
+@include media-tablet {
+  .table-contents {
+    display: flex;
+
+    &__item {
+      border: none;
+      background-color: var(--table-el-hover-bg);
+      border-radius: 1.25em;
+      color: var(--contrast-txt);
+      max-width: 155px;
+      min-height: 155px;
+      height: 100%;
+      padding: 1.25em;
+      width: 100%;
+      flex-shrink: 0;
+
+      span {
+        font-size: 1rem;
+      }
+    }
+
+    &__img-wrapper {
+      max-width: unset;
+      min-height: unset;
+      width: auto;
+      margin-bottom: 1.375em;
+      width: -webkit-min-content;
+      width: -moz-min-content;
+      width: min-content;
+      height: 46px;
+
+      svg {
+        scale: 0.76666666;
+      }
+
+      svg path:not(.svg-stroke) {
+        fill: var(--contrast-txt);
+      }
+
+      svg .svg-stroke {
+        stroke: var(--contrast-txt);
+      }
+    }
+  }
+}

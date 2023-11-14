@@ -1,0 +1,52 @@
+.number {
+  margin-left: 5.875em;
+  a {
+    font-size: 1rem;
+    color: var(--txt);
+    text-decoration: underline;
+    font-weight: 400;
+    transition: 0.3s;
+  }
+
+  a:hover {
+    transition: 0.3s;
+    color: var(--menu-hover-color);
+  }
+
+  &--footer {
+    a {
+      color: var(--contrast-txt);
+      font-weight: 300;
+    }
+
+    a:hover {
+      color: var(--menu-hover-color);
+    }
+  }
+
+  &--menu {
+    display: none;
+  }
+}
+
+@include media-tablet {
+  .number {
+    &--header {
+      display: none;
+    }
+
+    &--menu {
+      display: block;
+      margin-left: 0;
+      display: none;
+    }
+  }
+}
+
+@include media-mobile {
+  .number {
+    &--footer {
+      display: none;
+    }
+  }
+}
