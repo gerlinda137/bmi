@@ -14,6 +14,8 @@ html {
 body {
   margin: 0;
   min-width: 320px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
 }
 
 h1,
@@ -21,6 +23,35 @@ h2,
 h3,
 h4 {
   margin: 0;
+  color: var(--gunmetal);
+}
+
+h1 {
+  font-size: var(--xl);
+  line-height: 110%; /* 4.4rem */
+  letter-spacing: -0.2rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: var(--l);
+  font-weight: 600;
+  line-height: 110%; /* 3.3rem */
+  letter-spacing: -0.15rem;
+}
+
+h3 {
+  font-size: var(--m);
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.075rem;
+}
+
+h4 {
+  font-size: var(--s);
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.0625rem;
 }
 
 p {
@@ -44,9 +75,68 @@ a {
   cursor: pointer;
 }
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
 .container {
-  max-width: 1235px;
+  max-width: 1190px;
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+.radiobutton input[type="radio"] {
+  opacity: 0;
+}
+
+.radiobutton label::before {
+  content: "";
+  display: inline-block;
+
+  width: 1.9375rem;
+  height: 1.9375rem;
+  border-radius: 50%;
+  border: 1px solid var(--borders);
+}
+
+.radiobutton label::after {
+  content: "";
+  display: inline-block;
+  background-image: url("../../img/checked.svg");
+  width: 1.9375rem;
+  height: 1.9375rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.radiobutton label {
+  position: relative;
+  padding-left: 1.12em;
+}
+.radiobutton label::before,
+.radiobutton label::after {
+  position: absolute;
+}
+/*Outer-box*/
+.radiobutton label::before {
+  top: 0;
+  left: -50%;
+}
+/*Checkmark*/
+.radiobutton label::after {
+  left: -50%;
+  top: 0;
+}
+
+/*Hide the checkmark by default*/
+.radiobutton input[type="radio"] + label::after {
+  content: none;
+}
+/*Unhide the checkmark on the checked state*/
+.radiobutton input[type="radio"]:checked + label::after {
+  content: "";
 }

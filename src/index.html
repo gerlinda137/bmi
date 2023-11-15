@@ -11,11 +11,191 @@
     <meta property="og:url" content="" />
     <link rel="stylesheet" href="css/style.min.css" />
     <title>Gulp-template</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    />
   </head>
 
   <body>
-    <header class="main-header"></header>
-    <main class="main"></main>
+    <div class="wrapper">
+      <header class="main-header container">
+        <div class="main-header__logo-wrapper">
+          <img src="img/logo.svg" alt="logo" />
+        </div>
+      </header>
+      <section class="top">
+        <div class="page-info">
+          <h1 class="page-info__title">Body Mass Index Calculator</h1>
+          <p class="page-info__description">
+            Better understand your weight in relation to your height using our
+            body mass index (BM) calculator. While BMI is not the sole
+            determinant of a healthy weight, it offers a valuable starting point
+            to evaluate your overall health and well-being.
+          </p>
+        </div>
+        <div class="calc">
+          <form class="calc-form" action="post">
+            <h3>Enter your details below</h3>
+            <div class="calc-form__radios">
+              <div class="radiobutton">
+                <input type="radio" id="radio_metric" name="radio" />
+                <label for="radio_metric">Metric</label>
+              </div>
+              <div class="radiobutton">
+                <input type="radio" id="radio_imperial" name="radio" />
+                <label for="radio_imperial">Imperial</label>
+              </div>
+            </div>
+            <div class="calc-form__inputs"></div>
+          </form>
+          <div class="calc__output">
+            <h3>Welcome!</h3>
+            <p>
+              Enter your height and weight and you’ll see your BMI result here
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section class="about container">
+      <div class="about__img">
+        <img src="img/image-man-eating.webp" alt="Man eating" width="564" />
+      </div>
+      <div class="about__info">
+        <h2>What your BMI result means</h2>
+        <p>
+          A BMI range of 18.5 to 24.9 is considered a 'healthy weight.'
+          Maintaining a healthy weight may lower your chances of experiencing
+          health issues later on, such as obesity and type 2 diabetes. Aim for a
+          nutritious diet with reduced fat and sugar content, incorporating
+          ample fruits and vegetables. Additionally, strive for regular physical
+          activity, ideally about 30 minutes daily for five days a week.
+        </p>
+      </div>
+    </section>
+    <section class="principles">
+      <div class="principles__inner">
+        <div class="container">
+          <ul class="principles__list">
+            <li class="principles__list-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="64"
+                height="64"
+                fill="none"
+                viewBox="0 0 64 64"
+              >
+                <circle cx="32" cy="32" r="32" fill="#F21E84" opacity=".15" />
+                <path
+                  fill="#F21E84"
+                  d="M44 29.25h-1.279a10.75 10.75 0 0 0-21.442 0H20a.75.75 0 0 0-.75.75 12.794 12.794 0 0 0 7 11.383V42A1.75 1.75 0 0 0 28 43.75h8A1.75 1.75 0 0 0 37.75 42v-.617a12.793 12.793 0 0 0 7-11.383.75.75 0 0 0-.75-.75Zm-6.22-6.464c.363.29.703.608 1.019.95a10.737 10.737 0 0 0-6.444 5.514h-4.187A9.28 9.28 0 0 1 37 22.75c.26 0 .521.014.78.036Zm2.008 2.231a9.186 9.186 0 0 1 1.43 4.233H34.06a9.237 9.237 0 0 1 5.727-4.233ZM32 20.75a9.21 9.21 0 0 1 3.35.625 10.79 10.79 0 0 0-8.742 7.875h-3.826A9.261 9.261 0 0 1 32 20.75Zm4.688 19.48a.75.75 0 0 0-.438.683V42a.25.25 0 0 1-.25.25h-8a.25.25 0 0 1-.25-.25v-1.087a.75.75 0 0 0-.438-.683 11.294 11.294 0 0 1-6.537-9.48h22.45a11.294 11.294 0 0 1-6.538 9.48Z"
+                />
+              </svg>
+              <h3 class="principles__subtitle">Healthy eating</h3>
+
+              <p class="principles__description">
+                Healthy eating promotes weight control, disease prevention,
+                better digestion, immunity, mental clarity, and mood.
+              </p>
+            </li>
+            <li class="principles__list-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="64"
+                height="64"
+                fill="none"
+                viewBox="0 0 64 64"
+              >
+                <circle cx="32" cy="32" r="32" fill="#F69134" opacity=".15" />
+                <path
+                  fill="#F69134"
+                  d="M47 31.25h-1.25V27A1.75 1.75 0 0 0 44 25.25h-2.25V24A1.75 1.75 0 0 0 40 22.25h-3A1.75 1.75 0 0 0 35.25 24v7.25h-6.5V24A1.75 1.75 0 0 0 27 22.25h-3A1.75 1.75 0 0 0 22.25 24v1.25H20A1.75 1.75 0 0 0 18.25 27v4.25H17a.75.75 0 1 0 0 1.5h1.25V37A1.75 1.75 0 0 0 20 38.75h2.25V40A1.75 1.75 0 0 0 24 41.75h3A1.75 1.75 0 0 0 28.75 40v-7.25h6.5V40A1.75 1.75 0 0 0 37 41.75h3A1.75 1.75 0 0 0 41.75 40v-1.25H44A1.75 1.75 0 0 0 45.75 37v-4.25H47a.75.75 0 1 0 0-1.5Zm-27 6a.25.25 0 0 1-.25-.25V27a.25.25 0 0 1 .25-.25h2.25v10.5H20ZM27.25 40a.25.25 0 0 1-.25.25h-3a.25.25 0 0 1-.25-.25V24a.25.25 0 0 1 .25-.25h3a.25.25 0 0 1 .25.25v16Zm13 0a.25.25 0 0 1-.25.25h-3a.25.25 0 0 1-.25-.25V24a.25.25 0 0 1 .25-.25h3a.25.25 0 0 1 .25.25v16Zm4-3a.25.25 0 0 1-.25.25h-2.25v-10.5H44a.25.25 0 0 1 .25.25v10Z"
+                />
+              </svg>
+              <h3 class="principles__subtitle">Regular exercise</h3>
+
+              <p class="principles__description">
+                Exercise improves fitness, aids weight control, elevates mood,
+                and reduces disease risk, fostering wellness and longevity.
+              </p>
+            </li>
+            <li class="principles__list-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="64"
+                height="64"
+                fill="none"
+                viewBox="0 0 64 64"
+              >
+                <circle cx="32" cy="32" r="32" fill="#22C1C1" opacity=".15" />
+                <path
+                  fill="#22C1C1"
+                  d="M45.75 28a.75.75 0 0 1-.75.75h-2.25V31a.75.75 0 0 1-1.5 0v-2.25H39a.75.75 0 1 1 0-1.5h2.25V25a.75.75 0 1 1 1.5 0v2.25H45a.75.75 0 0 1 .75.75ZM34 22.75h1.25V24a.75.75 0 1 0 1.5 0v-1.25H38a.75.75 0 0 0 0-1.5h-1.25V20a.75.75 0 0 0-1.5 0v1.25H34a.75.75 0 1 0 0 1.5Zm8.906 12.535a.75.75 0 0 1 .134.75A11.751 11.751 0 1 1 27.97 20.96a.75.75 0 0 1 .992.849 11.262 11.262 0 0 0 13.23 13.229.75.75 0 0 1 .714.247Zm-1.796 1.418A12.765 12.765 0 0 1 27.297 22.89a10.248 10.248 0 0 0 1.526 18.849 10.25 10.25 0 0 0 12.287-5.036Z"
+                />
+              </svg>
+              <h3 class="principles__subtitle">Adequate sleep</h3>
+
+              <p class="principles__description">
+                Sleep enhances mental clarity, emotional stability, and physical
+                wellness, promoting overall restoration and rejuvenation.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="limitations container">
+      <h2>Limitations of BMI</h2>
+      <p>
+        Although BMI is often a practical indicator of healthy weight, it is not
+        suited for every person. Specific groups should carefully consider their
+        BMI outcomes, and in certain cases, the measurement may not be
+        beneficial to use.
+      </p>
+      <ul class="cards">
+        <li class="cards__item">
+          <h4>Gender</h4>
+          <p>
+            The development and body fat composition of girls and boys vary with
+            age. Consequently, a child's age and gender are considered when
+            evaluating their BMI.
+          </p>
+        </li>
+        <li class="cards__item">
+          <h4>Age</h4>
+          <p>
+            In aging individuals, increased body fat and muscle loss may cause
+            BMI to underestimate body fat content.
+          </p>
+        </li>
+        <li class="cards__item">
+          <h4>Muscle</h4>
+          <p>
+            BMI may misclassify muscular individuals as overweight or obese, as
+            it doesn't differentiate muscle from fat.
+          </p>
+        </li>
+        <li class="cards__item">
+          <h4>Pregnancy</h4>
+          <p>
+            Expectant mothers experience weight gain due to their growing baby.
+            Maintaining a healthy pre-pregnancy BMI is advisable to minimise
+            health risks for both mother and child.
+          </p>
+        </li>
+        <li class="cards__item">
+          <h4>Race</h4>
+          <p>
+            Certain health concerns may affect individuals of some Black and
+            Asian origins at lower BMIs than others. To learn more, it is
+            advised to discuss this with your GP or practice nurse.
+          </p>
+        </li>
+      </ul>
+    </section>
     <footer class="main-footer"></footer>
     <script src="js/main.min.js"></script>
   </body>
